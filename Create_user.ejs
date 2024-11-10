@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .profile-details, .education, .skills {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        input, textarea, button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            background-color: #f9f9f9;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 200px;
+            position: relative;
+            left: 600px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            input, textarea, button {
+                width: calc(100% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-details">
+            <h2>Profile Details</h2>
+            <form method="post" action="http://127.0.0.1:3000/profile/Create_user">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number" required>
+            
+                <label for="password">Login Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+                
+                <div class="education">
+                    <h2>Education</h2>
+                    <label for="secondary-school">Secondary School Name:</label>
+                    <input type="text" id="secondary-school" name="secondary_school" required>
+                    
+                    <label for="secondary-year">Passing Year:</label>
+                    <input type="text" id="secondary-year" name="secondary_year" required>
+                    
+                    <label for="senior-secondary-school">Senior Secondary School Name:</label>
+                    <input type="text" id="senior-secondary-school" name="senior_secondary_school" required>
+                    
+                    <label for="senior-secondary-year">Passing Year:</label>
+                    <input type="text" id="senior-secondary-year" name="senior_secondary_year" required>
+                    
+                    <label for="college-name">College Name:</label>
+                    <input type="text" id="college-name" name="college_name" required>
+                    
+                    <label for="college-year">Passing Year:</label>
+                    <input type="text" id="college-year" name="college_year" required>
+                </div>
+
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <label for="skill1">Skill 1:</label>
+                    <input type="text" id="skill1" name="skill1" required>
+                    
+                    <label for="skill2">Skill 2:</label>
+                    <input type="text" id="skill2" name="skill2">
+                    
+                    <label for="skill3">Skill 3:</label>
+                    <input type="text" id="skill3" name="skill3">
+                    
+                    <label for="skill4">Skill 4:</label>
+                    <input type="text" id="skill4" name="skill4">
+                </div>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

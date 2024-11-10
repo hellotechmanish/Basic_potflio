@@ -1,0 +1,522 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            width: 200px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+
+        .content h1, .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .profile-info, .education, .skills {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .details h2 {
+            font-size: 1.5rem;
+            color: #34495e;
+        }
+
+        .details p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .education h2, .skills h2 {
+            font-size: 2rem;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        .education ul, .skills ul {
+            list-style: none;
+        }
+
+        .education li, .skills li {
+            margin-bottom: 10px;
+        }
+
+        .education li p, .skills li p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                order: 1;
+            }
+
+            .content {
+                width: 100%;
+                order: 2;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .profile-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-info img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills h2 {
+            width: 100%;
+            margin-bottom: 10px; /* Adjust the spacing as needed */
+        }
+
+        .left,
+        .right {
+            width: 45%; /* Adjust as needed */
+        }
+
+        .left ul, 
+        .right ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left li,
+        .right li {
+            margin-bottom: 10px;
+        }
+
+        .left p,
+        .right p {
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="">Profile</a></li>
+                <li><a href="/profile/Create_user">Create_your</a></li>
+                <li><a href="/profile//login">Login</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+           
+            <h1>User Profile</h1>
+            <div class="profile-info">
+                <img src="https://scontent.fdel3-2.fna.fbcdn.net/v/t39.30808-6/297207724_149162871057173_8377540648712154538_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=rfR10EnaGogQ7kNvgGZI3Ap&_nc_ht=scontent.fdel3-2.fna&oh=00_AYDZFV-rI2INNvvaQDn0xm2jCt9uaSH2dqGX4H-eIM9F-A&oe=66627530" alt="Profile Image">
+                <div class="details">
+                    <h2>Manish-kumar    </h2>
+                    <p>Email: mk772542@gmail.com</p>
+                    <p>Phone: 7065942794</p>
+                    <p>Location: Ghazibad India</p>   
+                </div>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>
+                        <p><strong>Master of Science in Computer Science</strong></p>
+                        <p>XYZ University, 2020 - 2022</p>
+                    </li>
+                    <li>
+                        <p><strong>Bachelor of Science in Information Technology</strong></p>
+                        <p>ABC College, 2016 - 2020</p>
+                    </li>
+                    <li>
+                        <p><strong>Bachelor of Science in Information Technology</strong></p>
+                        <p>ABC College, 2016 - 2020</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="left">
+                    <ul>
+                        <li>
+                            <p>JavaScript</p>
+                        </li>
+                        <li>
+                            <p>Python</p>
+                        </li>
+                        <li>
+                            <p>React</p>
+                        </li>
+                        <li>
+                            <p>Node.js</p>
+                        </li>
+                    </ul>
+                </div>
+                   <div class="right">
+                    <ul>
+                        <li>
+                            <p>JavaScript</p>
+                        </li>
+                        <li>
+                            <p>Python</p>
+                        </li>
+                        <li>
+                            <p>React</p>
+                        </li>
+                        <li>
+                            <p>Node.js</p>
+                        </li>
+                    </ul>
+                   </div>
+
+            </div>
+            
+        </main>
+    </div>
+
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .sidebar {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            width: 200px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 15px;
+        }
+
+        .sidebar a {
+            color: #ecf0f1;
+            text-decoration: none;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+        }
+
+        .content h1, .content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .profile-info, .education, .skills {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .details h2 {
+            font-size: 1.5rem;
+            color: #34495e;
+        }
+
+        .details p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        .education h2, .skills h2 {
+            font-size: 2rem;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+
+        .education ul, .skills ul {
+            list-style: none;
+        }
+
+        .education li, .skills li {
+            margin-bottom: 10px;
+        }
+
+        .education li p, .skills li p {
+            font-size: 1rem;
+            color: #7f8c8d;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                order: 1;
+            }
+
+            .content {
+                width: 100%;
+                order: 2;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            .profile-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .profile-info img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills h2 {
+            width: 100%;
+            margin-bottom: 10px; /* Adjust the spacing as needed */
+        }
+
+        .left,
+        .right {
+            width: 45%; /* Adjust as needed */
+        }
+
+        .left ul, 
+        .right ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left li,
+        .right li {
+            margin-bottom: 10px;
+        }
+
+        .left p,
+        .right p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="">Profile</a></li>
+                <li><a href="/profile/Create_user">Create_your</a></li>
+                <li><a href="/profile/login">Login</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <h1>User Profile</h1>
+            <% Data.forEach(user => { %>
+                <div class="profile-info">
+                    <img src="https://via.placeholder.com/150" alt="Profile Image">
+                    <div class="details">
+                        <h2><%= user.Name %></h2>
+                        <p>Email: <%= user.Email %></p>
+                        <p>Phone: <%= user.number %></p>
+                        <p>Location: <%= user.Address %></p>   
+                    </div>
+                </div>
+                <div class="education">
+                    <h2>Education</h2>
+                    <ul>
+                        <li>
+                            <p><strong>Secondary School</strong></p>
+                            <p><%= user.secondary_school %>, <%= user.secondary_year %></p>
+                        </li>
+                        <li>
+                            <p><strong>Senior Secondary School</strong></p>
+                            <p><%= user.senior_secondary_school %>, <%= user.senior_secondary_year %></p>
+                        </li>
+                        <li>
+                            <p><strong>College</strong></p>
+                            <p><%= user.college_name %>, <%= user.college_year %></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills">
+                    <h2>Skills</h2>
+                    <div class="left">
+                        <ul>
+                            <% if (user.skill1) { %>
+                                <li><p><%= user.skill1 %></p></li>
+                            <% } %>
+                            <% if (user.skill2) { %>
+                                <li><p><%= user.skill2 %></p></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <% if (user.skill3) { %>
+                                <li><p><%= user.skill3 %></p></li>
+                            <% } %>
+                            <% if (user.skill4) { %>
+                                <li><p><%= user.skill4 %></p></li>
+                            <% } %>
+                        </ul>
+                    </div>
+                </div>
+            <% }) %>
+        </main>
+    </div>
+</body>
+</html>
